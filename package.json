@@ -1,0 +1,13 @@
+{
+  "name": "qr-code-generator",
+  "version": "1.0.0",
+  "main": "api/generate-qr.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node api/generate-qr.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4"
+  }
+}
