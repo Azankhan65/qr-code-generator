@@ -1,10 +1,19 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/generate-qr.js", "use": "@vercel/node" }
+    {
+      "src": "api/generate-qr.js",
+      "use": "@vercel/node"
+    }
   ],
   "routes": [
-    { "src": "/generate-qr", "dest": "api/generate-qr.js" },
-    { "src": "/(.*)", "dest": "/public/$1" }
+    {
+      "src": "/generate-qr",
+      "dest": "/api/generate-qr.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
   ]
 }
