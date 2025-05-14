@@ -3,11 +3,10 @@ const QRCode = require('qrcode');
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Serve static files (like HTML, CSS, JS)
 app.use(express.static('public'));
 
 // Generate QR Code API
-app.get('/generate-qr', (req, res) => {
+app.get('/api/generate-qr', (req, res) => {
   const url = req.query.url;
   if (!url) {
     return res.status(400).send({ error: 'URL is required' });
@@ -21,9 +20,6 @@ app.get('/generate-qr', (req, res) => {
   });
 });
 
-// Start the server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
-
