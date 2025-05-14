@@ -4,11 +4,15 @@
     {
       "src": "api/generate-qr.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/generate-qr",
+      "src": "/api/generate-qr",
       "dest": "/api/generate-qr.js"
     },
     {
